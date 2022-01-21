@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ConversorComponent } from './components';
-import { MoedaService } from '.';
+import { MoedaService } from './services';
 
 
 
