@@ -9,15 +9,14 @@ import { Conversao, ConversaoResponse } from '../models';
 })
 export class ConversorService {
   
-  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3";
+  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=b9fc7acf212b775a10e883d4a3bab003";
   constructor(private http: HttpClient) {}
 
   converter(conversao: Conversao): Observable<any> {
   let params = `&base=${conversao.moedaDe}&symbols=${conversao.moedaPara}`;
   
   return this.http
-      .get(this.BASE_URL + params);
-
+    .get(this.BASE_URL + params);
   }
 
   cotacaoPara(conversaoResponse: ConversaoResponse, conversao: Conversao): number {
